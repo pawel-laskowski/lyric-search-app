@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Navbar from './components/layout/Navbar'
-import Index from './components/layout/Index'
-import Lyrics from './components/tracks/Lyrics'
+import Navbar from './components/layout/Navbar';
+import Index from './components/layout/Index';
+import Lyrics from './components/tracks/Lyrics';
 
-import { Provider } from './context'
+import { Provider } from './context';
 
 import './App.css';
 
@@ -17,12 +17,12 @@ function App() {
           <Navbar />
           <div className="container">
             <Switch>
-              <Route exact={true} path="/" component={Index} />
+              <Route exact path="/" component={Index} />
               <Route exact path="/lyrics/track/:id" component={Lyrics} />
             </Switch>
           </div>
         </React.Fragment>
-      </Router>    
+      </Router>
     </Provider>
   );
 }
